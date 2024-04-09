@@ -119,6 +119,9 @@ class Magazine:
             author_counts[author] = author_counts.get(author, 0) + 1
 
         contributing_authors = [author for author, count in author_counts.items() if count > 2]
-        return contributing_authors if contributing_authors else None
+        if contributing_authors:
+            return contributing_authors 
+        else:
+             None
 
 
